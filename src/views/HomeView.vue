@@ -18,7 +18,6 @@ const fetchData = async (newValue) => {
     apiResponse.value = ''
     return
   }
-
   await axios({
     url: `http://localhost:3000/listName?name_like=${name.value}`,
   }).then((response) => {
