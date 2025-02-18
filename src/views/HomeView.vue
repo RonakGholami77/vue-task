@@ -20,7 +20,7 @@ const fetchData = async (newValue) => {
   }
 
   await axios({
-    url: `http://localhost:3000/listName`,
+    url: `http://localhost:3000/listName?name_like=${name.value}`,
   }).then((response) => {
     const result = response.data.find((item) => item.name === newValue)
     if (result) {
